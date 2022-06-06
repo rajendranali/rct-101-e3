@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import './product.js'
 
 const Products = () => {
-  return <div>{/* Code here */}</div>;
-};
+  //console.log(products)
+  return <></>
+}
 
-export default Products;
+export default Products

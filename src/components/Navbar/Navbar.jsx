@@ -1,16 +1,18 @@
-import React from "react";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 // use react-router Link or NavLink
-const Link = <a />;
+// const Link = <a />
 
 const Navbar = () => {
+  // const { isAuth, login, logout, SetAuth } = useContext(AuthContext)
   return (
     <div data-cy="navbar">
-      <Link data-cy="navbar-home-link"></Link>
+      <Link data-cy="navbar-home-link" to="/"></Link>
       <span data-cy="navbar-cart-items-count">{/* count here */}</span>
-      <button data-cy="navbar-login-logout-button"></button>
+      <button data-cy="navbar-login-logout-button">login</button>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

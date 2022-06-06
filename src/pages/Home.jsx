@@ -1,7 +1,16 @@
-import React from "react";
-
+import React, { useContext } from 'react'
+import { AuthContext } from '../context/AuthContext'
+import Product from '../components/Products/Product/Product'
+import { Navigate } from 'react-router'
+import Login from './Login'
 const Home = () => {
-  return <div>{/* Code here */}</div>;
-};
+  const { isAuth } = useContext(AuthContext)
 
-export default Home;
+  if (!isAuth) {
+    return <Product />
+  } else {
+    return <Login />
+  }
+}
+
+export default Home
